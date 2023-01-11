@@ -1,8 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <div class="container">
+    <div class="row mb-2 mt-5">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <input class="form-control me-2" type="search" placeholder="Хайх" aria-label="Search">
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">vi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <router-link to="/">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+          </router-link>
+          <router-link to="/about">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </router-link>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <router-view/>
 </template>
 
