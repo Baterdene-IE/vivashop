@@ -1,11 +1,16 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+// import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AppHeader from '../views/layout/AppHeader.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    components: {
+      header: AppHeader,
+      default: HomeView
+    }
   },
   {
     path: '/about',
@@ -18,7 +23,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 
